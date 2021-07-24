@@ -1,12 +1,10 @@
 package main
 
+import "fmt"
+
 func main() {
-	cards := deck{"Ace of Diamonds", newCard()}
+	cards := newDeck()
+	fmt.Println(cards.toString())
 
-	cards.print()
-
-}
-
-func newCard() string {
-	return "five of diamonds"
+	cards.saveToFile("saveCards.txt")
 }
